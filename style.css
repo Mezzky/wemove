@@ -408,6 +408,9 @@ footer{
 
 /* >>>>> Mobile View */
 @media screen and (max-width: 480px) {
+    main{
+        width: 90%;
+    }
     /* Home */
     main .home .home-content h2{
         font-size: 30px;
