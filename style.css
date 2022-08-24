@@ -44,6 +44,10 @@ ul,li{
     font-weight: bold;
 }
 
+.pembatas{
+    overflow-x: hidden;
+}
+
 
 /* ===== MAIN SYLE ===== */
 
@@ -227,8 +231,7 @@ main .icon-bar:hover i{
 
 /* About */
 main .about{
-    padding: 100px 100px;
-    height: 90vh;
+    padding: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -446,5 +449,41 @@ footer{
 
     main .contact form{
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    /* Home */
+    main .home .home-content h2{
+        font-size: 25px;
+    }
+
+    main .home .home-content p{
+        font-size: 14px;
+    }
+
+    main .home .home-img img{
+        width: 300px;
+    }
+
+    /* Icon Bar */
+    main .icon-bar i{
+        font-size: 28px;
+    }
+
+    /* About */
+    main .about .about-img img{
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+    }
+
+    main .about .about-content article{
+        font-size: 15px;
+    }
+
+    /* Contact */
+    main .contact form{
+        width: 100%;
     }
 }
