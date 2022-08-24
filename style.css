@@ -47,63 +47,13 @@ ul,li{
 
 /* ===== MAIN SYLE ===== */
 
-/* Menu Bars */
-.menu-toggle{
-    position: relative;
-    margin-right: 40px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.menu-toggle input{
-    position: absolute;
-    top: -6px;
-    left: -9px;
-    width: 40px;
-    height: 28px;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 2;
-}
-
-.menu-toggle span{
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: var(--dark-color);
-    border-radius: 3px;
-    transition: all .5s;
-}
-
-.menu-toggle input:checked ~ span:nth-child(2){
-    transform-origin: 0 0;
-}
-
-.menu-toggle input:checked ~ span:nth-child(4){
-    transform-origin: 0 100%;
-}
-
-.menu-toggle input:checked ~ span:nth-child(2){
-    transform: rotate(45deg) translate(-1px, -1px);
-}
-
-.menu-toggle input:checked ~ span:nth-child(3){
-    transform: scale(0);
-}
-
-.menu-toggle input:checked ~ span:nth-child(4){
-    transform: rotate(-45deg) translate(-2px, 1px);
-}
-
 /* Header */
 header{
     background-color: var(--bg-color);
     width: 100%;
     position: fixed;
     z-index: 100;
-    padding: 10px;
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,8 +108,58 @@ header nav li a:hover{
     text-decoration: underline;
 }
 
+/* Menu Bars */
+.menu-toggle{
+    position: relative;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-toggle input{
+    position: absolute;
+    top: -6px;
+    left: -9px;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--dark-color);
+    border-radius: 3px;
+    transition: all .5s;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-2px, 1px);
+}
+
 /* Main (Home) */
 main{
+    margin: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -408,8 +408,8 @@ footer{
 
 /* >>>>> Mobile View */
 @media screen and (max-width: 480px) {
-    main{
-        width: 90%;
+    main section{
+        padding: 0 40px;
     }
     /* Home */
     main .home .home-content h2{
